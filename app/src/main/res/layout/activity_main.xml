@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/MaterialAnimations.TextAppearance.Title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/sample_blue"
+        android:elevation="@dimen/elevation_header">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/MaterialAnimations.TextAppearance.Title.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:text="@string/app_name" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginTop="25dp"
+        android:textSize="25dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Choisir le type du"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginBottom="25dp"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:text="Remboursement"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rootExitAnim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal">
+
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/view11"
+                android:layout_width="260dp"
+                android:layout_marginRight="98dp"
+                android:layout_alignParentRight="true"
+                android:background="#630097ee"
+                android:layout_height="46dp"/>
+
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/view12"
+                android:layout_marginRight="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="260dp"
+                android:background="#9b2562f6"
+                android:layout_height="46dp"
+                android:translationZ="6dp"
+                android:elevation="6dp"/>
+
+            <RelativeLayout
+                android:id="@+id/relat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:elevation="8dp"
+                android:translationZ="8dp"
+                android:clipToPadding="false">
+
+
+                <TextView
+                    android:id="@+id/constantDureeText"
+                    android:transitionName="sharedFirst"
+                    android:layout_width="261dp"
+                    android:layout_height="46dp"
+                    android:text="Constant Durée"
+                    android:textSize="28dp"
+                    android:textColor="@color/sample_white"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="7dp"
+                    android:paddingRight="34dp"
+                    android:paddingLeft="34dp"
+                    android:shadowColor="#404040"
+                    android:shadowDx="-2"
+                    android:shadowDy="2"
+                    android:shadowRadius="0.1"
+                    android:elevation="4dp"
+                    android:onClick="getConstantDureeUserInput"/>
+
+                <Button
+                    android:id="@+id/but1"
+                    android:layout_width="260dp"
+                    android:layout_height="46dp"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:background="@color/sample_blue" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rootExitAnim2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/view21"
+                android:layout_width="260dp"
+                android:layout_marginRight="98dp"
+                android:layout_alignParentRight="true"
+                android:background="#630097ee"
+                android:layout_height="46dp"/>
+
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/view22"
+                android:layout_marginRight="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="260dp"
+                android:background="#9b2562f6"
+                android:layout_height="46dp"
+                android:translationZ="6dp"
+                android:elevation="6dp"/>
+
+            <RelativeLayout
+                android:id="@+id/relat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:elevation="8dp"
+                android:translationZ="8dp"
+                android:clipToPadding="false">
+
+
+                <TextView
+                    android:id="@+id/constantMontantText"
+                    android:transitionName="sharedFirst"
+                    android:layout_width="265dp"
+                    android:layout_height="46dp"
+                    android:text="Constant Montant"
+                    android:textSize="28dp"
+                    android:textColor="@color/sample_white"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="7dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:shadowColor="#404040"
+                    android:shadowDx="-2"
+                    android:shadowDy="2"
+                    android:shadowRadius="0.1"
+                    android:elevation="4dp"
+                    android:onClick="getConstantMontantUserInput"/>
+
+                <Button
+                    android:id="@+id/but2"
+                    android:layout_width="260dp"
+                    android:layout_height="46dp"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:background="@color/sample_blue" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rootExitAnim3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/view39"
+                android:layout_width="260dp"
+                android:layout_marginRight="98dp"
+                android:layout_alignParentRight="true"
+                android:background="#630097ee"
+                android:layout_height="46dp"/>
+
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/view32"
+                android:layout_marginRight="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="260dp"
+                android:background="#9b2562f6"
+                android:layout_height="46dp"
+                android:translationZ="6dp"
+                android:elevation="6dp"/>
+
+            <RelativeLayout
+                android:id="@+id/relat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:elevation="8dp"
+                android:translationZ="8dp"
+                android:clipToPadding="false">
+
+
+                <TextView
+                    android:id="@+id/degressifDureeText"
+                    android:transitionName="sharedFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:text="Degressif Durée"
+                    android:textSize="28dp"
+                    android:textColor="@color/sample_white"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="7dp"
+                    android:paddingRight="32dp"
+                    android:paddingLeft="32dp"
+                    android:shadowColor="#404040"
+                    android:shadowDx="-2"
+                    android:shadowDy="2"
+                    android:shadowRadius="0.1"
+                    android:elevation="4dp"
+                    android:onClick="getDegressifDureeUserInput"/>
+
+                <Button
+                    android:id="@+id/but3"
+                    android:layout_width="260dp"
+                    android:layout_height="46dp"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:background="@color/sample_blue" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rootExitAnim4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/view41"
+                android:layout_width="260dp"
+                android:layout_marginRight="98dp"
+                android:layout_alignParentRight="true"
+                android:background="#630097ee"
+                android:layout_height="46dp"/>
+
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/view42"
+                android:layout_marginRight="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="260dp"
+                android:background="#9b2562f6"
+                android:layout_height="46dp"
+                android:translationZ="6dp"
+                android:elevation="6dp"/>
+
+            <RelativeLayout
+                android:id="@+id/relat4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:elevation="8dp"
+                android:translationZ="8dp"
+                android:clipToPadding="false">
+
+
+                <TextView
+                    android:id="@+id/degressifMontantText"
+                    android:transitionName="sharedFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:text="Degressif Montant"
+                    android:textSize="28dp"
+                    android:textColor="@color/sample_white"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="7dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="18dp"
+                    android:shadowColor="#404040"
+                    android:shadowDx="-2"
+                    android:shadowDy="2"
+                    android:shadowRadius="0.1"
+                    android:elevation="4dp"
+                    android:onClick="getDegressifMontantUserInput"/>
+
+                <Button
+                    android:layout_width="260dp"
+                    android:layout_height="46dp"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:background="@color/sample_blue" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentBottom="true">
+    </LinearLayout>
+
+</LinearLayout>

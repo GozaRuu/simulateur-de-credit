@@ -1,0 +1,2 @@
+include ':app', ':SeekArc_library', ':ksoap2-android-assembly-2.6.5-jar-with-dependencies'
+project(':SeekArc_library').projectDir = new File('Modules and Jars/SeekArc_library')

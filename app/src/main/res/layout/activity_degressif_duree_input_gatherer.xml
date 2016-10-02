@@ -1,0 +1,450 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:transitionName="sharedFirst"
+        style="@style/MaterialAnimations.TextAppearance.Title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/sample_blue"
+        android:elevation="@dimen/elevation_header"
+        android:titleTextColor="@color/sample_white">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Montant de la tranche (Dt)"
+                />
+            <FrameLayout
+                android:id="@+id/seekArcContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1" >
+
+                <com.triggertrap.seekarc.SeekArc
+                    android:id="@+id/montant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="30dp"
+                    seekarc:arcColor="@color/sample_blue"
+                    seekarc:clockwise="true"
+                    seekarc:max="100000"
+                    seekarc:progressColor="@color/material_animations_primary"
+                    seekarc:rotation="180"
+                    seekarc:startAngle="30"
+                    seekarc:sweepAngle="300"
+                    seekarc:touchInside="true" />
+
+                <EditText
+                    android:id="@+id/montantProgress"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:inputType="number"
+                    android:textColor="@color/sample_blue"
+                    android:imeOptions="actionDone"
+                    android:text="2000" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="115dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Duree Tranche(mois):"
+                />
+            <FrameLayout
+                android:id="@+id/seekArcContainer2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1.1" >
+
+                <com.triggertrap.seekarc.SeekArc
+                    android:id="@+id/duree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="30dp"
+                    seekarc:arcColor="@color/sample_blue"
+                    seekarc:clockwise="true"
+                    seekarc:max="100000"
+                    seekarc:progressColor="@color/material_animations_primary"
+                    seekarc:rotation="180"
+                    seekarc:startAngle="30"
+                    seekarc:sweepAngle="300"
+                    seekarc:touchInside="true" />
+
+                <EditText
+                    android:id="@+id/dureeProgress"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/sample_blue"
+                    android:text="2000" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Taux(%):" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp">
+
+                <EditText
+                    android:id="@+id/tauxProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="01.25"
+                    android:textColor="#656565"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:textSize="14dp" />
+
+                <SeekBar
+                    style="@style/SeekBarAppTheme"
+                    android:id="@+id/taux"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="6000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/sample_blue"
+                    android:text="Periodicite Principal:" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/periodicitePrincipalProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="1"
+                        android:textColor="#656565"
+                        android:textSize="14dp" />
+
+                    <SeekBar
+                        style="@style/SeekBarAppTheme"
+                        android:id="@+id/periodicitePrincipal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10" />
+                    <requestFocus />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/sample_blue"
+                    android:text="Periodicite Interets:" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/periodiciteInteretsProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="1"
+                        android:textColor="#656565"
+                        android:textSize="14dp" />
+
+                    <SeekBar
+                        style="@style/SeekBarAppTheme"
+                        android:id="@+id/periodiciteInterets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="10" />
+                    <requestFocus />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Date de Déblocage:"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/dateDeblocage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#656565"
+                    android:textStyle="italic"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/dateDeblocageProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="cliquez ici pour choisir une date"
+                    android:textColor="#656565"
+                    android:textStyle="italic"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Première Echeance Principal:"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/premiereEcheancePrincipal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#656565"
+                    android:textStyle="italic"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/premiereEcheancePrincipalProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="cliquez ici pour choisir une date"
+                    android:textColor="#656565"
+                    android:textStyle="italic"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Première Echeance Interets:"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/premiereEcheanceInterets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#656565"
+                    android:textStyle="italic"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/premiereEcheanceInteretsProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="cliquez ici pour choisir une date"
+                    android:textColor="#656565"
+                    android:textStyle="italic"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:translationZ="8dp"
+        android:layout_marginBottom="15dp"
+        android:clipToPadding="false"
+        android:layout_gravity="center_horizontal">
+
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:onClick="connectAndSend"
+            android:text="Envoyer"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:background="#33b5e5"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="false" />
+
+    </RelativeLayout>
+
+</LinearLayout>

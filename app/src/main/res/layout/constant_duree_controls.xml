@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="240dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Taux:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/tauxProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="40"
+                    android:textColor="#656565"
+                    android:textSize="14dp" />
+
+                <SeekBar
+                    style="@style/SeekBarAppTheme"
+                    android:id="@+id/taux"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="150" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Periodicite:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/periodiciteProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="1"
+                    android:textColor="#656565"
+                    android:textSize="14dp" />
+
+                <SeekBar
+                    style="@style/SeekBarAppTheme"
+                    android:id="@+id/periodicite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="10" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Date de Déblocage:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/dateDeblocageProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="70"
+                    android:textColor="#656565"
+                    android:textSize="14dp" />
+
+                <SeekBar
+                    style="@style/SeekBarAppTheme"
+                    android:id="@+id/dateDeblocage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="150"
+                    android:indeterminate="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/sample_blue"
+                android:text="Premiére Echéance:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/premiereEcheanceProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:text="30"
+                    android:textColor="#656565"
+                    android:textSize="14dp" />
+
+                <SeekBar
+                    style="@style/SeekBarAppTheme"
+                    android:id="@+id/premiereEcheance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="150" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
