@@ -15,3 +15,7 @@ I used the [Ksoap2 libraries](http://simpligility.github.io/ksoap2-android/getti
 #### For any unexpected bug : 
 Both dependency projects are in `/Modules_and_Jars`.
 if a certain bug keeps gradle from properly building the project you start a new project **with the same name** include both dependency projects as modules and copy my code from `/app/src/main/` and copy it to the new project.
+
+##Video
+Here is a descriptive video in which I demonstrate a full user story:</br>
+[YOUTUBE](https://www.youtube.com/watch?v=-jRVaCsAjwE)
